@@ -1,0 +1,49 @@
+import sys
+import time
+
+def jalanin_lirik():
+    lirik = [
+        ("The sun rise ", 0.2, 0.1),
+        ("And set so fast ", 0.14, 0.8),
+        ("It feels like peace has come at last ", 0.09, 1),
+        ("Feels like peace has come at last ", 0.09, 1.6),
+        ("Laughing ", 0.14, 1),
+        ("With all my friends ", 0.14, 1),
+        ("As if this memory finally ends ", 0.09, 0.9),
+        ("As if this memory finally ends ", 0.09, 1),
+
+        ("But when i close my eyes ", 0.14, 1.2),
+        ("There's a piece comes to me ", 0.09, 0.4),
+        ("And i saw you ", 0.14, 2.4),
+        ("Running through the dark and say ", 0.09, 3.4),
+
+        ("The smell of your shirt ", 0.07, 0.2),
+        ("The feel of your skin ", 0.07, 0.2),
+        ("Your dark hair your smile ", 0.07, 0.2),
+        ("I remember it all ", 0.08, 0.2),
+        ("I thought i moved on ", 0.07, 0.3),
+        ("Thought i'd be fine ", 0.07, 0.2),
+        ("Then i hear your name ", 0.07, 0.2),
+        ("It all go restart ", 0.09, 0.9),
+        ("So i guess it never change ", 0.2, 0.4),
+        ("... ", 1.4    , 0.2),
+    ]
+
+    print("\n== Never Change - Nathaniel Rivan ==")
+    time.sleep(1.0)
+
+    for baris_lagu, delay_karakter, delay_setelah in lirik:
+
+        # Efek mengetik per karakter
+        for karakter in baris_lagu:
+            print(karakter, end="")
+            sys.stdout.flush()
+            time.sleep(delay_karakter)
+
+        # Jeda mengikuti perpindahan nada/lirik
+        time.sleep(delay_setelah)
+        print("")
+
+    print("// Code by Fanncode")
+
+jalanin_lirik()
